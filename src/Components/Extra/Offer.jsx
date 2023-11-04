@@ -4,7 +4,7 @@ import img3 from './../../assets/img/section.jpg'
 
 const Offer = () => {
     return (
-        <div className="flex w-4/5  gap-x-10 my-16 justify-center mx-auto items-center">
+        <div className="flex flex-row-reverse w-4/5  gap-x-10 my-16 justify-center mx-auto items-center">
                 <div className='w-1/2 '>
                     <img className='h-[710px] rounded-lg w-full' src={img1} alt="" />
                 </div>

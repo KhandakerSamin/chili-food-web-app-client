@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { Link, NavLink } from "react-router-dom";
 import logo from './../assets/img/logo-2.png'
 import swal from "sweetalert";
@@ -15,8 +16,6 @@ const Navbar = () => {
         <li className='text-base font-semibold'><NavLink to='/'>Home</NavLink></li>
         <li className='text-base font-semibold'><NavLink to='/allFoods'>All Food Items</NavLink></li>
         <li className='text-base font-semibold'><NavLink to='/blog'>Blog</NavLink></li>
-        {/* {user && <li className='text-lg font-bold'><NavLink to="/addProduct">Add Product</NavLink></li>}
-        {user && <li className='text-lg font-bold'><NavLink to="/cart">My Cart</NavLink></li>} */}
     </>
 
     const toggleTheme = () => {
@@ -33,7 +32,6 @@ const Navbar = () => {
         console.log("signed OUt");
     }
 
-    
 
     return (
         <div className="navbar">
@@ -57,17 +55,19 @@ const Navbar = () => {
             <div className="navbar-end">
                 <div className='mr-10 flex justify-center items-center'>
 
+                    {/* user profile dropdown */}
+
                     <div className='flex justify-center items-center'>
-                        <div className="dropdown">
-                            <label tabIndex={0} className="">
+
+                        <div class="dropdown dropdown-hover dropdown-bottom">
+                            <label tabIndex={0} className="m-1">
                                 {user ?
                                     <img className='rounded-full w-[35px] md:w-[40px] h-[35px] md:h-[40px] mr-5' src={user.photoURL} alt='' />
-                                    :
-                                    // <img className='w-10 h-10 rounded-full mr-4' src={img} alt="" />
-                                    <></>
+                                    : <></>
                                 }
                             </label>
-                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 mr-10 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+
+                            <ul tabindex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><a> My added food items</a></li>
                                 <li><a>Add a food item
                                 </a></li>
@@ -77,10 +77,14 @@ const Navbar = () => {
 
                     </div>
 
+                    {/* theme toggle */}
+
                     <button onClick={toggleTheme} className=" mx-4  normal-case">
                         {theme === "light" ? <MdDarkMode className='text-3xl mt-1'></MdDarkMode> : <MdLightMode className='text-3xl mt-1'></MdLightMode>}
                     </button>
 
+                    {/* signIn signOut toggle  */}
+                    
                     <div>
                         {
                             user ? (

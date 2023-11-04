@@ -6,7 +6,7 @@ const Reserve = () => {
     };
 
     return (
-        <div className='bg-cover h-[500px] ' style={bannerStyle}>
+        <div className='bg-cover h-[460px] w-4/5 mx-auto' style={bannerStyle}>
             <div>
                 <h1 className='text-white text-center font-bold pt-12 mb-5 text-2xl'>Reservation</h1>
                 <h1 className='text-white text-center font-bold mb-10 text-5xl'>BOOK YOUR TABLE</h1>

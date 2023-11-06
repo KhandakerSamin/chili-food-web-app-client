@@ -27,9 +27,9 @@ const AllFood = () => {
 
             <div className="form-control relative">
 
-                <div className="flex justify-between gap-10 mx-16 items-center">
+                <div className="flex bg-red-200 px-20 py-4 justify-between gap-10 rounded-2xl items-center">
                     <div>
-                        <h1 className='text-4xl text-center mb-6 font-bold'>Our All Food Items</h1>
+                        <h1 className='text-4xl text-center  font-bold'>Our All Food Items</h1>
                     </div>
                     <input
                         type="text"

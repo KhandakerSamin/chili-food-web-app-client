@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link,  useLoaderData, useNavigate } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
 import bannerImg from '../assets/img/italian-food-composition-with-big-space-middle.jpg';
 import axios from "axios";
@@ -20,28 +20,43 @@ const CheckOut = () => {
     // console.log(foodInfo);
     const { Price, Image, _id, Category, Name, Quantity, Description, MadeBy, FoodOrigin } = foodInfo;
 
+    const currentDate = new Date();
+
+    const hours = currentDate.getHours();
+    const minutes = currentDate.getMinutes();
+    const seconds = currentDate.getSeconds();
+    const PurchaseTime = ` ${hours}:${minutes}:${seconds}`
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth() + 1; // Months are zero-indexed (0-11), so we add 1 to get the real month (1-12).
+    const day = currentDate.getDate();
+    const PurchaseDate = ` ${year}-${month}-${day}`
+    console.log(PurchaseDate);
 
     const handleCheckOut = () => {
         const order = {
-            name:Name,
-            image:Image,
+            name: Name,
+            image: Image,
             Category,
             Quantity,
             MadeBy,
-            userName:user.displayName,
-            userEmail:user.email
+            Price,
+            FoodOrigin,
+            userName: user.displayName,
+            userEmail: user.email,
+            PurchaseTime,
+            PurchaseDate
         }
         console.log(order);
-        if(userEmail == MadeBy){
-            return  swal("CheckOut Failed!", "You Created Ths product , you cant buy", "error");
+        if (userEmail == MadeBy) {
+            return swal("CheckOut Failed!", "You Created Ths product , you cant buy", "error");
         }
         const url = 'http://localhost:5000/carts';
         axios.post(url, order)
-        .then(res => {
-            console.log(res.data);
-            swal("CheckOut Confirmed!", "You Purchase this Successfully!", "success");
-            navigate('/allFoods')
-        })
+            .then(res => {
+                console.log(res.data);
+                swal("CheckOut Confirmed!", "You Purchase this Successfully!", "success");
+                navigate('/allFoods')
+            })
     }
 
 
@@ -70,7 +85,7 @@ const CheckOut = () => {
                     </div>
                 </div>
                 <div className="flex justify-center items-center">
-                <Link><button onClick={handleCheckOut} className="btn btn-outline px-40 normal-case font-bold  text-2xl my-10">Purchase Now</button></Link>
+                    <Link><button onClick={handleCheckOut} className="btn btn-outline px-40 normal-case font-bold  text-2xl my-10">Purchase Now</button></Link>
 
                 </div>
             </div>

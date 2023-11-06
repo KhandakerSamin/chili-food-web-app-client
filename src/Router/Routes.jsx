@@ -14,6 +14,7 @@ import PrivateRoute from "./PrivateRoute";
 import AddFood from "../Pages/AddFood";
 import MyCart from "../Pages/MyCart";
 import MyAddedFood from "../Pages/MyAddedFood";
+import UpdateFood from "../Pages/UpdateFood";
 
 
 
@@ -65,6 +66,11 @@ import MyAddedFood from "../Pages/MyAddedFood";
         {
           path:'/myCart',
           element:<PrivateRoute><MyCart></MyCart></PrivateRoute>
+        },
+        {
+          path:'/updateFoods/:id',
+          element:<UpdateFood></UpdateFood>,
+          loader: ({params}) => fetch(`http://localhost:5000/allFoods/${params.id}`)
         }
        
       ]

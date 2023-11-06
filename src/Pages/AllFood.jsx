@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import img from '../assets/img/3834.jpg';
 import FoodCard from '../Components/FoodCard';
+import bannerImg from '../assets/img/allFoodBanner.jpg'
+
 
 const AllFood = () => {
     const allFoods = useLoaderData();
@@ -11,26 +13,22 @@ const AllFood = () => {
         food.Name.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
+    const bannerStyle = {
+        backgroundImage: `url(${bannerImg})`,
+    };
+
     return (
         <div>
-            {/*  all food banner  */}
 
-            <div className='flex mx-auto justify-between px-36 items-center h-[450px]'>
-                <div>
-                    <h1 className='text-5xl font-semibold text-left '><span className='font-bold text-7xl'>Food</span> you love , <br /> delivered <span className='font-bold text-7xl'>to you </span></h1>
-                    <h1></h1>
-                    <button className="btn btn-outline my-10">Learn More...</button>
-                </div>
-                <div>
-                    <img className='h-[400px]' src={img} alt="" />
-                </div>
+            <div className="bg-cover rounded-2xl  mb-16 mx-2 h-[480px]" style={bannerStyle}>
+                        <h1 className='text-5xl py-[245px] text-white font-semibold text-center '><span className='font-bold text-7xl'>Food</span> you love , <br /> delivered <span className='font-bold text-7xl'>to you </span>
+                        </h1>
             </div>
 
             <div className="form-control relative">
 
-                <div className="flex justify-center gap-10 items-center">
-                <div>
-                        <h1 className='text-xl text-center font-bold'>Chili Food</h1>
+                <div className="flex justify-between gap-10 mx-16 items-center">
+                    <div>
                         <h1 className='text-4xl text-center mb-6 font-bold'>Our All Food Items</h1>
                     </div>
                     <input
@@ -40,7 +38,7 @@ const AllFood = () => {
                         value={searchQuery}
                         onChange={e => setSearchQuery(e.target.value)}
                     />
-                    
+
                 </div>
             </div>
 

@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 
 const FoodCard = ({ food }) => {
-    const { Price, Image,_id, Category, Name, Quantity } = food;
+    const { Price, Image, _id, Category, Name, Quantity, FoodOrigin } = food;
     // console.log(food);
     return (
         <div className="shadow-xl max-w-[350px] rounded-xl">
@@ -16,10 +16,14 @@ const FoodCard = ({ food }) => {
                     <h1 className="text-xl w-1/2 text-left font-bold">$ {Price}</h1>
                     <h1 className="text-xl w-1/2 text-left font-semibold">{Category}</h1>
                 </div>
-                <div className="flex  items-center mb-7">
+                <div className="flex  items-center mb-5">
                     <h1 className="text-xl text-left font-semibold w-1/2">Quantity:{Quantity}</h1>
+                    <h1 className="text-xl text-left font-semibold w-1/2">Origin: {FoodOrigin}</h1>
+
+                </div>
+                <div className="mb-5">
                     <Link to={`/foodDetails/${_id}`}>
-                    <button className="normal-case text-left text-xl font-semibold ">Details</button>
+                        <button className="normal-case btn btn-outline w-full  ">Details</button>
                     </Link>
                 </div>
             </div>

@@ -68,24 +68,25 @@ const CheckOut = () => {
                 <p className="text-center text-white font-semibold text-3xl">For Confirm Purchase Click the Purchase Button</p>
             </div>
 
-            <div className="w-2/3 mx-auto p-10 bg-red-50 my-10">
+            <div className="w-2/3 mx-auto p-10 bg-red-50 rounded-2xl my-10">
                 <h1 className="text-4xl font-bold text-center">{Name} </h1>
                 <div className="flex justify-between items-start px-32 mt-10">
                     <div className="space-y-3">
-                        <h1 className="text-2xl font-bold">Product Information : </h1>
+                        <h1 className="text-2xl font-bold">Food Info : </h1>
                         <h1 className="text-xl font-bold">Price : $ {Price} </h1>
                         <h1 className="text-xl font-bold">Quantity: 01</h1>
                         <h1 className="text-xl font-bold">Category: {Category} </h1>
                     </div>
                     <div className="space-y-3">
-                        <h1 className="text-2xl font-bold">Your Information: </h1>
+                        <h1 className="text-2xl font-bold">Your Info : </h1>
                         <h1 className="text-xl font-bold">UserName : {user.displayName}</h1>
                         <h1 className="text-xl font-bold">Email : {user.email}</h1>
+                        <h1 className="text-xl font-bold">Date : {PurchaseDate}</h1>
 
                     </div>
                 </div>
                 <div className="flex justify-center items-center">
-                    <Link><button onClick={handleCheckOut} className="btn btn-outline px-40 normal-case font-bold  text-2xl my-10">Purchase Now</button></Link>
+                    <Link><button onClick={handleCheckOut} className="btn btn-outline px-40 normal-case font-bold  text-2xl my-10">Confirme Purchase</button></Link>
 
                 </div>
             </div>

@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import bannerImg from './../assets/img/kitchen-table-with-ingredients-cooking-top-view-still-life-rustic-style-ai-generated.jpg';
+// import bannerImg from './../assets/img/italian-food-composition-with-big-space-middle.jpg';
 
 const Banner = () => {
     const bannerStyle = {

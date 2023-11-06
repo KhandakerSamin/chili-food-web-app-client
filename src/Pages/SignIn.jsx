@@ -5,10 +5,11 @@ import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProviders";
 import Swal from "sweetalert2";
 import swal from "sweetalert";
+import axios from "axios";
 
 const SignIn = () => {
 
-    const { signInUser, googleSingIn } = useContext(AuthContext);
+    const { signInUser, googleSingIn ,user } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -23,6 +24,7 @@ const SignIn = () => {
             .then(res => {
                 console.log(res);
                 console.log("Sign in successfully");
+                
                 // navigate after login 
                 navigate(location?.state ? location.state : '/')
                 swal("Signed in!", "You Signed in Successfully!", "success");
@@ -50,6 +52,16 @@ const SignIn = () => {
                 console.log(err);
             })
     }
+
+    const userInfo = {
+        userName: user?.displayName, 
+        userEmail: user?.email
+    }
+    const url = 'http://localhost:5000/users';
+    axios.post(url, userInfo)
+    .then(res => {
+        console.log(res.data);
+    })
 
 
     return (

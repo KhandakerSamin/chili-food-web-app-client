@@ -68,12 +68,12 @@ const Navbar = () => {
                             </label>
 
                             <ul tabindex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                                <li><a> My added food items</a></li>
-                                <li><a>Add a food item
-                                </a></li>
-                                <li><a>My ordered food items</a></li>
+                                <NavLink to='/myAddedFood'><li><a> My added food items</a></li></NavLink>
+                                <NavLink to='/addFood'><li><a>Add a food item
+                                </a></li></NavLink>
+                                <NavLink to='myCart'><li><a>My ordered food items</a></li></NavLink>
                             </ul>
-                        </div>
+                        </div> 
 
                     </div>
 
@@ -84,7 +84,7 @@ const Navbar = () => {
                     </button>
 
                     {/* signIn signOut toggle  */}
-                    
+
                     <div>
                         {
                             user ? (

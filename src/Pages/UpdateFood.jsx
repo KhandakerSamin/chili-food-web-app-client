@@ -60,7 +60,9 @@ const UpdateFood = () => {
     const url = `http://localhost:5000/allFoods/${_id}`;
     axios.put(url, foodItem).then((res) => {
       console.log(res.data);
-      swal('Food Updated', 'You Updated a Food Successfully!', 'success');
+      if(res.data.modifiedCount > 0){
+        swal('Food Updated', 'You Updated a Food Successfully!', 'success');
+      }
     });
   };
 

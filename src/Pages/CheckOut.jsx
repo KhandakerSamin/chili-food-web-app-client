@@ -35,6 +35,11 @@ const CheckOut = () => {
     console.log(PurchaseDate);
 
     const handleCheckOut = () => {
+
+        if(Quantity == 0 ){
+            return swal("CheckOut Failed!", "Sorry, This Product is not available at the moment", "error");
+        }
+
         const order = {
             name: Name,
             image: Image,

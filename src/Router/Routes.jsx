@@ -69,7 +69,7 @@ import UpdateFood from "../Pages/UpdateFood";
         },
         {
           path:'/updateFoods/:id',
-          element:<UpdateFood></UpdateFood>,
+          element:<PrivateRoute><UpdateFood></UpdateFood></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/allFoods/${params.id}`)
         }
        

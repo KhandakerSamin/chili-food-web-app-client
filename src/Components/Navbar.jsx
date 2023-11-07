@@ -62,16 +62,16 @@ const Navbar = () => {
                         <div class="dropdown dropdown-hover dropdown-bottom">
                             <label tabIndex={0} className="m-1">
                                 {user ?
-                                    <img className='rounded-full w-[35px] md:w-[40px] h-[35px] md:h-[40px] mr-5' src={user.photoURL} alt='' />
+                                    <img className='rounded-full w-[35px] md:w-[40px] h-[35px]  md:h-[40px] mr-7' src={user.photoURL} alt='' />
                                     : <></>
                                 }
                             </label>
 
                             <ul tabindex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                                <NavLink to='/myAddedFood'><li><a> My added food items</a></li></NavLink>
-                                <NavLink to='/addFood'><li><a>Add a food item
+                                <NavLink to='/myAddedFood'><li><a className="text-lg font-bold"> My added food items</a></li></NavLink>
+                                <NavLink to='/addFood'><li><a className="text-lg font-bold">Add a food item
                                 </a></li></NavLink>
-                                <NavLink to='myCart'><li><a>My ordered food items</a></li></NavLink>
+                                <NavLink to='myCart'><li><a className="text-lg font-bold">My ordered food items</a></li></NavLink>
                             </ul>
                         </div> 
 
@@ -79,7 +79,7 @@ const Navbar = () => {
 
                     {/* theme toggle */}
 
-                    <button onClick={toggleTheme} className=" mx-4  normal-case">
+                    <button onClick={toggleTheme} className=" mx-6  normal-case">
                         {theme === "light" ? <MdDarkMode className='text-3xl mt-1'></MdDarkMode> : <MdLightMode className='text-3xl mt-1'></MdLightMode>}
                     </button>
 

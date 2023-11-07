@@ -4,6 +4,8 @@ import { AuthContext } from "../Providers/AuthProviders";
 import bannerImg from '../assets/img/italian-food-composition-with-big-space-middle.jpg';
 import axios from "axios";
 import swal from "sweetalert";
+import { Helmet } from 'react-helmet';
+
 
 const CheckOut = () => {
 
@@ -18,7 +20,7 @@ const CheckOut = () => {
     const userEmail = user.email
     const foodInfo = useLoaderData()
     // console.log(foodInfo);
-    const { Price, Image, _id, Category, Name, Quantity, Description, MadeBy, FoodOrigin } = foodInfo;
+    const { Price, Image, _id, Category, Name,Count, Quantity, Description, MadeBy, FoodOrigin } = foodInfo;
 
     const currentDate = new Date();
 
@@ -56,12 +58,34 @@ const CheckOut = () => {
                 console.log(res.data);
                 swal("CheckOut Confirmed!", "You Purchase this Successfully!", "success");
                 navigate('/allFoods')
+
+                const updatedCount = Count + 1;
+                const updatedQuantity = Quantity-1;
+                console.log(updatedCount);
+                const updateUrl = `http://localhost:5000/allFoods/${_id}`
+                axios.patch(updateUrl, {Count: updatedCount , Quantity: updatedQuantity})
+                .then(res => {
+                    console.log(res.data);
+                })
+
+                // console.log(updatedQuantity);
+                // const updatedUrl = `http://localhost:5000/allFoods/${_id}`
+                // axios.patch(updatedUrl, {Quantity: updatedQuantity})
+                // .then(res => {
+                //     console.log(res.data);
+                // })
+
             })
     }
 
 
     return (
-        <div>
+        <div> 
+            <Helmet>
+                <title>CheckOut</title>
+                <meta name="description" content="This is a description of my page." />
+            </Helmet>
+
             <div className="bg-cover rounded-2xl mx-2 min-h-[350px]" style={bannerStyle}>
                 <h1 className="text-white text-7xl font-bold text-center pb-4 pt-20">Check Out</h1>
                 <p className="text-center font-semibold  text-white text-3xl">Your Choosen Food Item is here </p>
@@ -74,7 +98,7 @@ const CheckOut = () => {
                     <div className="space-y-3">
                         <h1 className="text-2xl font-bold">Food Info : </h1>
                         <h1 className="text-xl font-bold">Price : $ {Price} </h1>
-                        <h1 className="text-xl font-bold">Quantity: 01</h1>
+                        <h1 className="text-xl font-bold">Quantity: {Quantity}</h1>
                         <h1 className="text-xl font-bold">Category: {Category} </h1>
                     </div>
                     <div className="space-y-3">
@@ -86,7 +110,7 @@ const CheckOut = () => {
                     </div>
                 </div>
                 <div className="flex justify-center items-center">
-                    <Link><button onClick={handleCheckOut} className="btn btn-outline px-40 normal-case font-bold  text-2xl my-10">Confirme Purchase</button></Link>
+                    <Link><button onClick={handleCheckOut} className="btn btn-outline px-40 normal-case font-bold  text-2xl my-10">Confirm Purchase</button></Link>
 
                 </div>
             </div>

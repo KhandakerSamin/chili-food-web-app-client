@@ -3,6 +3,8 @@ import { useLoaderData } from 'react-router-dom';
 import img from '../assets/img/3834.jpg';
 import FoodCard from '../Components/FoodCard';
 import bannerImg from '../assets/img/allFoodBanner.jpg';
+import { Helmet } from 'react-helmet';
+
 
 const ITEMS_PER_PAGE = 6; // Number of items per page
 
@@ -33,6 +35,12 @@ const AllFood = () => {
 
     return (
         <div>
+
+            <Helmet>
+                <title>All Food</title>
+                <meta name="description" content="This is a description of my page." />
+            </Helmet>
+
             <div className="bg-cover rounded-2xl mb-16 mx-2 h-[480px]" style={bannerStyle}>
                 <h1 className='text-5xl py-[245px] text-white font-semibold text-center '>
                     <span className='font-bold text-7xl'>Food</span> you love , <br /> delivered <span className='font-bold text-7xl'>to you </span>
@@ -65,9 +73,8 @@ const AllFood = () => {
                     {Array.from({ length: totalPages }, (_, index) => (
                         <button
                             key={index}
-                            className={`btn ${
-                                index + 1 === currentPage ? 'btn bg-red-300' : 'btn-outline'
-                            }`}
+                            className={`btn ${index + 1 === currentPage ? 'btn bg-red-300' : 'btn-outline'
+                                }`}
                             onClick={() => handlePageChange(index + 1)}
                         >
                             {index + 1}

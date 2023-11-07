@@ -3,6 +3,8 @@ import bannerImg from '../assets/img/addProductbg.jpg'
 import { AuthContext } from '../Providers/AuthProviders';
 import axios from 'axios';
 import swal from 'sweetalert';
+import { Helmet } from 'react-helmet';
+
 const AddFood = () => {
 
     const bannerStyle = {
@@ -31,16 +33,21 @@ const AddFood = () => {
         console.log(foodItem);
         const url = 'http://localhost:5000/allFoods';
         axios.post(url, foodItem)
-        .then(res => {
-            console.log(res.data);
-            swal("Food Added ", "You Added a New Food Successfully!", "success");
+            .then(res => {
+                console.log(res.data);
+                swal("Food Added ", "You Added a New Food Successfully!", "success");
 
-        })
-        
+            })
+
     }
 
     return (
         <div>
+
+            <Helmet>
+                <title>All Food</title>
+                <meta name="description" content="This is a description of my page." />
+            </Helmet>
 
             <div className="bg-cover rounded-2xl mx-2 min-h-[350px]" style={bannerStyle}>
                 <h1 className="text-white text-7xl font-bold text-center pb-4 pt-20">Add A New Food</h1>

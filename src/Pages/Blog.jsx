@@ -1,5 +1,7 @@
 // Blog.jsx
 import React from 'react';
+import { Helmet } from 'react-helmet';
+
 
 const Blog = () => {
   const blogPosts = [
@@ -19,6 +21,12 @@ const Blog = () => {
 
   return (
     <div className="container mx-auto mt-16">
+
+<Helmet>
+                <title>Blog</title>
+                <meta name="description" content="This is a description of my page." />
+            </Helmet>
+
       <h1 className="text-5xl text-center font-bold mb-4">Welcome to Chili Food Blog Page</h1>
       {blogPosts.map((post, index) => (
         <div key={index} className="bg-white p-4 shadow-md rounded-lg mb-4">

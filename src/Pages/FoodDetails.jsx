@@ -1,5 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import bannerImg from '../assets/img/FoodDetailBanner.jpg'
+import { Helmet } from 'react-helmet';
+
 
 
 const FoodDetails = () => {
@@ -7,12 +9,19 @@ const FoodDetails = () => {
     console.log(foodInfo);
     const { Price, Image, _id, Category, Name, Quantity, Description, MadeBy, FoodOrigin } = foodInfo;
 
+
     const bannerStyle = {
         backgroundImage: `url(${bannerImg})`,
     };
 
     return (
         <div >
+
+            <Helmet>
+                <title>Details</title>
+                <meta name="description" content="This is a description of my page." />
+            </Helmet>
+
             <div className="bg-cover rounded-2xl mx-2 min-h-[350px]" style={bannerStyle}>
                 <h1 className="text-white text-3xl font-bold text-center pb-4 pt-20">Details Of </h1>
                 <h1 className="text-white text-7xl font-bold text-center pb-4 pt-5">{Name}</h1>
@@ -28,7 +37,7 @@ const FoodDetails = () => {
                     <h1 className="text-4xl  font-bold">{Name} </h1>
                     <h1 className="text-3xl font-bold">Price: $ {Price} </h1>
                     <h1 className="text-2xl font-semibold">Category: {Category} </h1>
-                    <h1 className="text-2xl font-semibold">Category: {Quantity} </h1>
+                    <h1 className="text-2xl font-semibold">Quantity: {Quantity} </h1>
                     <h1 className="text-2xl font-semibold">Made By: {MadeBy} </h1>
                     <h1 className="text-2xl font-semibold">Food Origin: {FoodOrigin} </h1>
                     <h1 className="text-2xl font-semibold">Description: {Description} </h1>

@@ -9,10 +9,10 @@ const Banner = () => {
     };
 
     return (
-        <div className="h-[550px] bg-cover rounded-2xl" style={bannerStyle}>
-            <div className='pt-24 pl-36 space-y-7'>
-                <h1 className='text-6xl text-white font-bold text-left mb-4 '>Spice Up Your Palate <br /> with Chili Food's <br /> Culinary Delights!</h1>
-                <p className='font-semibold text-lg text-white '>Chili Food: A culinary voyage awaits. Savor fiery flavors  and diverse <br /> cuisines at Chili Food. From mild to hot,  we'll tantalize your taste buds <br /> with an unforgettable dining experience</p>
+        <div className="h-[550px] bg-cover rounded-none md:rounded-2xl" style={bannerStyle}>
+            <div className='pt-24 px-14 md:pl-36 space-y-7'>
+                <h1 className='text-4xl md:text-6xl text-white font-bold text-left mb-4 '>Spice Up Your Palate <br /> with Chili Food's <br /> Culinary Delights!</h1>
+                <p className='font-semibold text-base md:text-lg text-white '>Chili Food: A culinary voyage awaits. Savor fiery flavors  and diverse <br /> cuisines at Chili Food. From mild to hot,  we'll tantalize your taste buds <br /> with an unforgettable dining experience</p>
                 <Link to='/allFoods'>
 
                 </Link>

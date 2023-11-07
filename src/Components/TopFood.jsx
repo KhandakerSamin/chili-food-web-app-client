@@ -20,12 +20,12 @@ const TopFood = () => {
 
     return (
         <div>
-            <h1 className='text-5xl text-center mt-20 font-bold '>Our Top Selling Foods</h1>
+            <h1 className='text-5xl text-center mt-8 md:mt-20 font-bold '>Our Top Selling Foods</h1>
             <p className='text-xl text-center  font-semibold'> This Prouducts are sorted here by Purchased Count by Customer </p>
             {data ? (
                 <div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-36 gap-7 mt-20 mb-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-8 md:mx-36 gap-7 mt-8 md:mt-20 mb-10">
                         {
                             data.map(
                                 singleData => <TopFoodCard key={singleData._id} singleData={singleData}></TopFoodCard>

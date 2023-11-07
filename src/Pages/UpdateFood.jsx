@@ -196,12 +196,7 @@ const UpdateFood = () => {
                     </div>
                   </div>
                   <div className="mb-10 mt-8">
-                    <button
-                      type="submit"
-                      className="btn normal-case text-xl font-bold btn-outline text-[#331A15] w-full"
-                    >
-                      Update Food
-                    </button>
+                    <button type="submit" className="btn normal-case text-xl font-bold btn-outline text-[#331A15] w-full" >Update Food</button>
                   </div>
                 </form>
               </div>

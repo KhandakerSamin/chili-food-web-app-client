@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 const MyFoodCard = ({ food }) => {
 
-    const { Price, Image, _id, Count, Category, Name, Quantity } = food;
+    const { Price, Image, _id, FoodOrigin, Category,  Name, Quantity } = food;
+;
+
 
 
     return (
@@ -11,7 +14,7 @@ const MyFoodCard = ({ food }) => {
             <div className="">
                 <img className="w-[350px] rounded-t-2xl h-[250px]" src={Image} alt="" />
             </div>
-            <div className="mx-10 gap-x-10">
+            <div className="mx-5 gap-x-8">
                 <h1 className="text-center font-bold text-2xl my-5">{Name}</h1>
                 <div className="flex w-full items-center">
                     <h1 className="text-xl w-1/2 text-left font-bold">$ {Price}</h1>
@@ -19,12 +22,11 @@ const MyFoodCard = ({ food }) => {
                 </div>
                 <div className="flex  items-center mb-2">
                     <h1 className="text-xl text-left font-semibold w-1/2">Quantity:{Quantity}</h1>
-                    <h1 className="text-xl text-left font-semibold w-1/2">Quantity:{Count}</h1>
-
+                    <h1 className="text-xl text-left font-semibold w-1/2">Origin:{FoodOrigin}</h1>
                 </div>
                 <div className="flex justify-center items-center  mt-8 mb-7">
                     <Link to={`/updateFoods/${_id}`}>
-                    <button className="btn btn-outline px-10">Update This Food</button></Link>
+                        <button className="btn normal-case btn-outline px-10">Update This Food</button></Link>
                 </div>
             </div>
         </div>

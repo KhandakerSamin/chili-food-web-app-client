@@ -40,7 +40,7 @@ const FoodDetails = () => {
                     <h1 className="text-2xl font-semibold">Quantity: {Quantity} </h1>
                     <h1 className="text-2xl font-semibold">Made By: {MadeBy} </h1>
                     <h1 className="text-2xl font-semibold">Food Origin: {FoodOrigin} </h1>
-                    <h1 className="text-2xl font-semibold">Description: {Description} </h1>
+                    <h1 className="text-xl font-semibold">Description: {Description} </h1>
                 </div>
             </div>
             <div className="flex justify-center items-center">

@@ -19,8 +19,8 @@ const CheckOut = () => {
     const { user } = useContext(AuthContext)
     const userEmail = user.email
     const foodInfo = useLoaderData()
-    // console.log(foodInfo);
-    const { Price, Image, _id, Category, Name,Count, Quantity, Description, MadeBy, FoodOrigin } = foodInfo;
+
+    const { Price, Image, _id, Category, Name,Count, Quantity,  MadeBy, FoodOrigin } = foodInfo;
 
     const currentDate = new Date();
 
@@ -61,20 +61,11 @@ const CheckOut = () => {
 
                 const updatedCount = Count + 1;
                 const updatedQuantity = Quantity-1;
-                console.log(updatedCount);
                 const updateUrl = `http://localhost:5000/allFoods/${_id}`
                 axios.patch(updateUrl, {Count: updatedCount , Quantity: updatedQuantity})
                 .then(res => {
                     console.log(res.data);
                 })
-
-                // console.log(updatedQuantity);
-                // const updatedUrl = `http://localhost:5000/allFoods/${_id}`
-                // axios.patch(updatedUrl, {Quantity: updatedQuantity})
-                // .then(res => {
-                //     console.log(res.data);
-                // })
-
             })
     }
 

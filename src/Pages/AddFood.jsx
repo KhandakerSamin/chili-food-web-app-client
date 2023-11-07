@@ -61,7 +61,7 @@ const AddFood = () => {
                 </div>
                 <div className="bg-cover  flex justify-center items-center  h-full" >
 
-                    <div className='w-2/3 h-5/6 rounded-md bg-[#F4F3F0]'>
+                    <div className='w-2/3 h-5/6 rounded-md bg-red-50'>
                         <h1 className='text-4xl mt-12 mb-5 font-bold text-[#374151] text-center '>Add New Food Item</h1>
 
                         <div className='mx-14'>

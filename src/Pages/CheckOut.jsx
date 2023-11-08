@@ -56,7 +56,7 @@ const CheckOut = () => {
         }
         console.log(order);
         if (userEmail == MadeBy) {
-            return swal("CheckOut Failed!", "You Created Ths product , you cant buy", "error");
+            return swal("CheckOut Failed!", "You Created Ths product , you can't buy", "error");
         }
         const url = 'http://localhost:5000/carts';
         axios.post(url, order)
@@ -79,7 +79,7 @@ const CheckOut = () => {
     return (
         <div>
             <Helmet>
-                <title>ChiliFood|CheckOut</title>
+                <title>ChiliFood | CheckOut</title>
                 <meta name="description" content="This is a description of my page." />
             </Helmet>
 

@@ -68,11 +68,11 @@ const Navbar = () => {
                             </label>
 
                             <ul tabindex={0} className="dropdown-content z-[1] menu p-2 gap-y-2 md:p-5 shadow bg-base-100 rounded-box  w-32 md:w-44">
-                                <li className="text-xl font-bold">My Profile</li>
-                                <NavLink to='/myAddedFood'><li><a className="text-base md:text-lg font-normal md:font-bold"> My added  food items</a></li></NavLink>
-                                <NavLink to='/addFood'><li><a className="text-base md:text-lg font-normal md:font-bold">Add a <br />food item
+                                <li className="text-xl font-bold">My Profile: 😎</li>
+                                <NavLink to='/myAddedFood'><li><a className="text-base md:text-lg font-normal md:font-bold">👉 My added  food items</a></li></NavLink>
+                                <NavLink to='/addFood'><li><a className="text-base md:text-lg font-normal md:font-bold">👉 Add a food item
                                 </a></li></NavLink>
-                                <NavLink to='myCart'><li><a className="text-base md:text-lg font-normal md:font-bold">My ordered <br />food items</a></li></NavLink>
+                                <NavLink to='myCart'><li><a className="text-base md:text-lg font-normal md:font-bold">👉 My ordered food items</a></li></NavLink>
 
                                 
 
@@ -90,12 +90,12 @@ const Navbar = () => {
 
                     {/* signIn signOut toggle  */}
 
-                    <div className="mr-0 ">
+                    <div className="md:mr-3 md:ml-3 ">
                         {
                             user ? (
-                                <Link to='/'><button onClick={handleSignOut} className='normal-case text-lg btn btn-outline font-bold text-black'>Sign Out</button></Link>
+                                <Link to='/'><button onClick={handleSignOut} className='normal-case text-base md:text-lg btn btn-outline font-bold text-black'>Sign Out</button></Link>
                             ) : (
-                                <Link to='/signIn'><button className='normal-case text-lg btn btn-outline font-bold text-black'>SignIn</button></Link>
+                                <Link to='/signIn'><button className='normal-case text-base md:text-lg btn btn-outline font-bold text-black'>SignIn</button></Link>
                             )
                         }
                     </div>

@@ -45,11 +45,13 @@ const AuthProviders = ({ children }) => {
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
             console.log("User in the auth state changed", currentUser);
+
             const userEmail = currentUser?.email || user?.email ;
             const loggedUser = {email : userEmail }
 
             setUser(currentUser);
             setLoading(false);
+
             // token if there are user
             if(currentUser){
                 axios.post('http://localhost:5000/jwt',loggedUser, {withCredentials:true})
@@ -63,9 +65,11 @@ const AuthProviders = ({ children }) => {
                 })
             }
         });
+
         return () => {
             unSubscribe();
         };
+        
     }, [user]);
 
     const userInfo = {

@@ -117,7 +117,7 @@ const SignUp = () => {
                         </div>
 
                         <div className="form-control mt-6 w-full">
-                            <button className="btn border-none  bg-[#FFB100] normal-case text-lg font-bold w-full text-white hover:text-black " type="submit">Sign Up</button>
+                            <button className="btn btn-outline border-none   normal-case text-lg  bg-gray-300 font-bold w-full" type="submit">Sign Up</button>
                         </div>
                     </form>
                     <button onClick={handleGoogleLogin} className="btn btn-outline normal-case text-lg font-bold bg-gray-300 w-full mt-2 mb-2 border-none text-black">
@@ -125,7 +125,7 @@ const SignUp = () => {
                         Continue with google
                     </button>
                     <div>
-                        <h1 className="font-semibold text-base text-center mb-8 mt-2">Already Have An Account ? <Link to='/signIn' className="text-[#FFB100]">Sign In</Link></h1>
+                        <h1 className="font-semibold text-base text-center mb-8 mt-2">Already Have An Account ? <Link to='/signIn' className="text-blue-700">Sign In</Link></h1>
                     </div>
                 </div>
                 <div>

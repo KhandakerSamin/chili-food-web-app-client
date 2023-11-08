@@ -10,19 +10,19 @@ const Root = () => {
     const getPageTitle = () => {
         switch (location.pathname) {
             case "/":
-                return "ChiliFood|Home";
+                return "ChiliFood | Home";
             case "/allFoods":
-                return "ChiliFood|AllFoods";
+                return "ChiliFood | AllFoods";
             case "/blog":
-                return "ChiliFood|Blog";
+                return "ChiliFood | Blog";
             case "/signUp":
-                return "ChiliFood|SignUp";
+                return "ChiliFood | SignUp";
             case "/signIn":
-                return "ChiliFood|SginIn";
+                return "ChiliFood | SginIn";
             case "/myCart":
-                return "ChiliFood|myCart";
+                return "ChiliFood | myCart";
             case "/myAddedFood":
-                return "ChiliFood|myAddedFood";
+                return "ChiliFood | myAddedFood";
             default:
                 return "ChiliFood";
         }

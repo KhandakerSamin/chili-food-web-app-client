@@ -1,5 +1,3 @@
-// Blog.jsx
-import { Helmet } from 'react-helmet';
 import bannerImg from '../assets/img/blog.jpg'
 
 
@@ -33,11 +31,6 @@ const Blog = () => {
           <span className='font-bold text-7xl'>Welcome</span> to Blogs  <br /> for our  <span className='font-bold text-7xl'>Chili Food </span>
         </h1>
       </div>
-
-      <Helmet>
-        <title>Blog</title>
-        <meta name="description" content="This is a description of my page." />
-      </Helmet>
 
       {blogPosts.map((post, index) => (
         <div key={index} className="bg-white my-10 mx-24 shadow-md p-16 rounded-lg ">

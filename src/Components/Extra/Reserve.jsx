@@ -7,7 +7,7 @@ const Reserve = () => {
 
     return (
         <div>
-            <h1 className='text-5xl text-center mt-20 font-bold '>Advance Table Booking</h1>
+            <h1 className='text-5xl text-center mb-5 mt-20 font-bold '>Advance Table Booking</h1>
             <p className='text-xl text-center  font-semibold'> You can book your table and time as like your occation </p>
             <div className='bg-cover my-1 h-[460px] rounded-2xl mt-20 w-4/5 mx-auto' style={bannerStyle}>
                 <div>

@@ -20,7 +20,7 @@ const TopFood = () => {
 
     return (
         <div>
-            <h1 className='text-5xl text-center mt-8 md:mt-20 font-bold '>Our Top Selling Foods</h1>
+            <h1 className='text-5xl text-center mb-5 mt-8 md:mt-20 font-bold '>Our Top Selling Foods</h1>
             <p className='text-xl text-center  font-semibold'> This Prouducts are sorted here by Purchased Count by Customer </p>
             {data ? (
                 <div>

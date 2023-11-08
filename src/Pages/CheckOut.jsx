@@ -7,6 +7,7 @@ import swal from "sweetalert";
 import { Helmet } from 'react-helmet';
 
 
+
 const CheckOut = () => {
 
 
@@ -20,7 +21,7 @@ const CheckOut = () => {
     const userEmail = user.email
     const foodInfo = useLoaderData()
 
-    const { Price, Image, _id, Category, Name,Count, Quantity,  MadeBy, FoodOrigin } = foodInfo;
+    const { Price, Image, _id, Category, Name, Count, Quantity, MadeBy, FoodOrigin } = foodInfo;
 
     const currentDate = new Date();
 
@@ -36,7 +37,7 @@ const CheckOut = () => {
 
     const handleCheckOut = () => {
 
-        if(Quantity == 0 ){
+        if (Quantity == 0) {
             return swal("CheckOut Failed!", "Sorry, This Product is not available at the moment", "error");
         }
 
@@ -65,20 +66,20 @@ const CheckOut = () => {
                 navigate('/allFoods')
 
                 const updatedCount = Count + 1;
-                const updatedQuantity = Quantity-1;
+                const updatedQuantity = Quantity - 1;
                 const updateUrl = `http://localhost:5000/allFoods/${_id}`
-                axios.patch(updateUrl, {Count: updatedCount , Quantity: updatedQuantity})
-                .then(res => {
-                    console.log(res.data);
-                })
+                axios.patch(updateUrl, { Count: updatedCount, Quantity: updatedQuantity })
+                    .then(res => {
+                        console.log(res.data);
+                    })
             })
     }
 
 
     return (
-        <div> 
+        <div>
             <Helmet>
-                <title>CheckOut</title>
+                <title>ChiliFood|CheckOut</title>
                 <meta name="description" content="This is a description of my page." />
             </Helmet>
 

@@ -9,13 +9,22 @@ const Root = () => {
     // Define a function to generate the page title based on the current route
     const getPageTitle = () => {
         switch (location.pathname) {
-            case "/page-one":
-                return "Page One Title";
-            case "/page-two":
-                return "Page Two Title";
-            // Add more cases for other routes
+            case "/":
+                return "ChiliFood|Home";
+            case "/allFoods":
+                return "ChiliFood|AllFoods";
+            case "/blog":
+                return "ChiliFood|Blog";
+            case "/signUp":
+                return "ChiliFood|SignUp";
+            case "/signIn":
+                return "ChiliFood|SginIn";
+            case "/myCart":
+                return "ChiliFood|myCart";
+            case "/myAddedFood":
+                return "ChiliFood|myAddedFood";
             default:
-                return "Chili Food";
+                return "ChiliFood";
         }
     };
 

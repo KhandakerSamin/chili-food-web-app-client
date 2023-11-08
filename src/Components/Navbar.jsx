@@ -73,22 +73,22 @@ const Navbar = () => {
                                 </a></li></NavLink>
                                 <NavLink to='myCart'><li><a className="text-base md:text-lg font-normal md:font-bold">My ordered <br />food items</a></li></NavLink>
                             </ul>
-                        </div> 
+                        </div>
 
                     </div>
 
                     {/* theme toggle */}
 
                     <button onClick={toggleTheme} className=" mx-2  normal-case">
-                        {theme === "light" ? <MdDarkMode className='text-3xl mt-1'></MdDarkMode> : <MdLightMode className='text-3xl mt-1'></MdLightMode>}
+                        {theme === "light" ? <MdDarkMode className='text-3xl mt-1'></MdDarkMode> : <MdLightMode className='text-white text-3xl mt-1'></MdLightMode>}
                     </button>
 
                     {/* signIn signOut toggle  */}
 
-                    <div>
+                    <div className="mr-0 ">
                         {
                             user ? (
-                                <Link to='/'><button onClick={handleSignOut} className='text-lg font-bold text-black'>Sign Out</button></Link>
+                                <Link to='/'><button onClick={handleSignOut} className='normal-case text-lg btn btn-outline font-bold text-black'>Sign Out</button></Link>
                             ) : (
                                 <Link to='/signIn'><button className='text-base md:text-lg font-bold text-black'>SignIn</button></Link>
                             )

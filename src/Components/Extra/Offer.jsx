@@ -11,10 +11,10 @@ const Offer = () => {
                 <div className='w-full md:w-1/2 '>
                     <img className='h-[580px] rounded-lg w-full' src={img1} alt="" />
                 </div>
-                <div className="flex w-full md:w-1/2 mt-4 md:gap-y-12 flex-col justify-center ">
+                <div className="flex w-full md:w-1/2 mt-4 md:mt-0 md:gap-y-12 flex-col justify-center ">
 
                     <img className='rounded-lg mb-4 md:mb-0' src={img2} alt="" />
-                    <img className='rounded-lg ' src={img3} alt="" />
+                    <img className='rounded-lg mb-4 md:mb-0 ' src={img3} alt="" />
                 </div>
             </div>
         </div>

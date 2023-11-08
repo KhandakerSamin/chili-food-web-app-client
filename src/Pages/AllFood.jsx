@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import img from '../assets/img/3834.jpg';
 import FoodCard from '../Components/FoodCard';
 import bannerImg from '../assets/img/allFoodBanner.jpg';
-import { Helmet } from 'react-helmet';
 import loadingImg from '../assets/img/c4cb9abc7c69713e7e816e6a624ce7f8 - Copy.gif'
 
 
@@ -37,12 +35,6 @@ const AllFood = () => {
 
     return (
         <div>
-
-            <Helmet>
-                <title>All Food</title>
-                <meta name="description" content="This is a description of my page." />
-            </Helmet>
-
             
             <div className="bg-cover rounded-2xl mb-16 mx-2 h-[480px]" style={bannerStyle}>
                 <h1 className='text-5xl py-[245px] text-white font-semibold text-center '>

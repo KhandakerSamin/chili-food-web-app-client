@@ -18,7 +18,7 @@ const FoodDetails = () => {
         <div >
 
             <Helmet>
-                <title>Details</title>
+                <title>ChiliFood|Details</title>
                 <meta name="description" content="This is a description of my page." />
             </Helmet>
 

@@ -53,7 +53,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <div className='mr-10 flex justify-center items-center'>
+                <div className=' mr-2 flex justify-center items-center'>
 
                     {/* user profile dropdown */}
 
@@ -62,16 +62,16 @@ const Navbar = () => {
                         <div class="dropdown dropdown-hover dropdown-bottom">
                             <label tabIndex={0} className="m-1">
                                 {user ?
-                                    <img className='rounded-full w-[35px] md:w-[40px] h-[35px]  md:h-[40px] mr-7' src={user.photoURL} alt='' />
+                                    <img className='rounded-full w-[35px] md:w-[40px] h-[35px]  md:h-[40px] mr-2' src={user.photoURL} alt='' />
                                     : <></>
                                 }
                             </label>
 
-                            <ul tabindex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                                <NavLink to='/myAddedFood'><li><a className="text-lg font-bold"> My added food items</a></li></NavLink>
-                                <NavLink to='/addFood'><li><a className="text-lg font-bold">Add a food item
+                            <ul tabindex={0} className="dropdown-content z-[1] menu p-1 shadow bg-base-100 rounded-box w-32 md:w-44">
+                                <NavLink to='/myAddedFood'><li><a className="text-base md:text-lg font-normal md:font-bold"> My added  food items</a></li></NavLink>
+                                <NavLink to='/addFood'><li><a className="text-base md:text-lg font-normal md:font-bold">Add a <br />food item
                                 </a></li></NavLink>
-                                <NavLink to='myCart'><li><a className="text-lg font-bold">My ordered food items</a></li></NavLink>
+                                <NavLink to='myCart'><li><a className="text-base md:text-lg font-normal md:font-bold">My ordered <br />food items</a></li></NavLink>
                             </ul>
                         </div> 
 
@@ -79,7 +79,7 @@ const Navbar = () => {
 
                     {/* theme toggle */}
 
-                    <button onClick={toggleTheme} className=" mx-6  normal-case">
+                    <button onClick={toggleTheme} className=" mx-2  normal-case">
                         {theme === "light" ? <MdDarkMode className='text-3xl mt-1'></MdDarkMode> : <MdLightMode className='text-3xl mt-1'></MdLightMode>}
                     </button>
 
@@ -90,7 +90,7 @@ const Navbar = () => {
                             user ? (
                                 <Link to='/'><button onClick={handleSignOut} className='text-lg font-bold text-black'>Sign Out</button></Link>
                             ) : (
-                                <Link to='/signIn'><button className='text-lg font-bold text-black'>SignIn</button></Link>
+                                <Link to='/signIn'><button className='text-base md:text-lg font-bold text-black'>SignIn</button></Link>
                             )
                         }
                     </div>

@@ -83,8 +83,9 @@ const CheckOut = () => {
             </Helmet>
 
             <div className="bg-cover rounded-2xl mx-2 min-h-[350px]" style={bannerStyle}>
-                <h1 className="text-white text-7xl font-bold text-center pb-4 pt-20">Check Out</h1>
-                <p className="text-center font-semibold  text-white text-3xl">Your Choosen Food Item is here </p>
+                <h1 className="text-white text-7xl font-bold text-center pb-4 pt-16">Check Out</h1>
+                <p className="text-center font-semibold  text-white pb-2 text-3xl">Your Choosen Food Item is here </p>
+                <p className="text-center text-white font-semibold pb-2 text-4xl">{Name}</p>
                 <p className="text-center text-white font-semibold text-3xl">For Confirm Purchase Click the Purchase Button</p>
             </div>
 
@@ -96,12 +97,14 @@ const CheckOut = () => {
                         <h1 className="text-xl font-bold">Price : $ {Price} </h1>
                         <h1 className="text-xl font-bold">Quantity: {Quantity}</h1>
                         <h1 className="text-xl font-bold">Category: {Category} </h1>
+                        <h1 className="text-xl font-bold">Owner: {MadeBy} </h1>
                     </div>
                     <div className="space-y-3">
                         <h1 className="text-2xl font-bold">Your Info : </h1>
                         <h1 className="text-xl font-bold">UserName : {user.displayName}</h1>
                         <h1 className="text-xl font-bold">Email : {user.email}</h1>
                         <h1 className="text-xl font-bold">Date : {PurchaseDate}</h1>
+                        <h1 className="text-xl font-bold">Time : {PurchaseTime}</h1>
 
                     </div>
                 </div>

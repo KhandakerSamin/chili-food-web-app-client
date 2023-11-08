@@ -25,15 +25,15 @@ const FoodDetails = () => {
             <div className="bg-cover rounded-2xl mx-2 min-h-[350px]" style={bannerStyle}>
                 <h1 className="text-white text-3xl font-bold text-center pb-4 pt-20">Details Of </h1>
                 <h1 className="text-white text-7xl font-bold text-center pb-4 pt-5">{Name}</h1>
-                {/* <p className="text-center font-semibold  text-white text-3xl">Your Choosen Food Item is here </p>
-                <p className="text-center text-white font-semibold text-3xl">For Confirm Purchase Click the Purchase Button</p> */}
+                <h1 className="text-white text-3xl font-bold text-center pb-4 pt-5">{Category}</h1>
+                
             </div>
             <div className="flex justify-center gap-x-8 mx-16 mt-20 items-start">
                 <div className="w-2/3">
                     <img className="w-full rounded-2xl h-[500px]" src={Image} alt="" />
 
                 </div>
-                <div className="w-1/3 space-y-6">
+                <div className="w-1/3 mt-5 space-y-6">
                     <h1 className="text-4xl  font-bold">{Name} </h1>
                     <h1 className="text-3xl font-bold">Price: $ {Price} </h1>
                     <h1 className="text-2xl font-semibold">Category: {Category} </h1>

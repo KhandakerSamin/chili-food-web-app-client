@@ -23,7 +23,7 @@ const Reserve = () => {
                     </div>
                     <div className='flex justify-center items-center gap-x-7 mx-10 mb-4'>
                         <input type="text" placeholder="Table Preferance" className="input w-1/2 input-bordered md:w-full max-w-xs" />
-                        <button className="btn bg-red-100 w-1/2 md:w-[320px]">FIND A TABLE</button>
+                        <button className="btn btn-outline text-xl font-bold bg-white normal-case w-1/2 md:w-[320px]">Find your table</button>
                     </div>
                 </div>
             </div>

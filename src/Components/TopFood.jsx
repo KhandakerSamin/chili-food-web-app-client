@@ -45,7 +45,7 @@ const TopFood = () => {
 
                 </div>
             ) : (
-                <img className="w-2/5 mx-auto" src={loadingImg} alt="" />
+                <img className="w-2/5 mt-5 mx-auto" src={loadingImg} alt="" />
             )}
 
         </div>

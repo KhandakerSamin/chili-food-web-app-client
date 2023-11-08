@@ -8,7 +8,7 @@ import loadingImg from '../assets/img/c4cb9abc7c69713e7e816e6a624ce7f8 - Copy.gi
 
 
 
-const ITEMS_PER_PAGE = 6; // Number of items per page
+const ITEMS_PER_PAGE = 9; // Number of items per page
 
 const AllFood = () => {
     const allFoods = useLoaderData();

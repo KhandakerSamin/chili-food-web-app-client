@@ -40,7 +40,7 @@ const Navbar = () => {
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-sm gap-x-4 dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm gap-x-2 dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {navLinks}
                     </ul>
                 </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
                     <img className='h-20 md:ml-10 w-full' src={logo} alt="" />
                 </div>            </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu gap-x-4 menu-horizontal px-1">
+                <ul className="menu gap-x-2 menu-horizontal px-1">
                     {navLinks}
                 </ul>
             </div>
@@ -67,11 +67,16 @@ const Navbar = () => {
                                 }
                             </label>
 
-                            <ul tabindex={0} className="dropdown-content z-[1] menu p-1 shadow bg-base-100 rounded-box w-32 md:w-44">
+                            <ul tabindex={0} className="dropdown-content z-[1] menu p-2 gap-y-2 md:p-5 shadow bg-base-100 rounded-box  w-32 md:w-44">
+                                <li className="text-xl font-bold">My Profile</li>
                                 <NavLink to='/myAddedFood'><li><a className="text-base md:text-lg font-normal md:font-bold"> My added  food items</a></li></NavLink>
                                 <NavLink to='/addFood'><li><a className="text-base md:text-lg font-normal md:font-bold">Add a <br />food item
                                 </a></li></NavLink>
                                 <NavLink to='myCart'><li><a className="text-base md:text-lg font-normal md:font-bold">My ordered <br />food items</a></li></NavLink>
+
+                                
+
+
                             </ul>
                         </div>
 
@@ -90,7 +95,7 @@ const Navbar = () => {
                             user ? (
                                 <Link to='/'><button onClick={handleSignOut} className='normal-case text-lg btn btn-outline font-bold text-black'>Sign Out</button></Link>
                             ) : (
-                                <Link to='/signIn'><button className='text-base md:text-lg font-bold text-black'>SignIn</button></Link>
+                                <Link to='/signIn'><button className='normal-case text-lg btn btn-outline font-bold text-black'>SignIn</button></Link>
                             )
                         }
                     </div>

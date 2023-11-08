@@ -4,7 +4,7 @@
 
 **Chili Food** is a web application for selling Foods . 
 
-**Live Website**: [Explore Chili Food](https://chili-food.web.app/)
+**Live Website**: (https://chili-food.web.app/)
 
 ## Technologies Used
 

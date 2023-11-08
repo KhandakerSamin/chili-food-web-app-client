@@ -4,12 +4,12 @@
 
 **Chili Food** is a web application for selling Foods . 
 
-**Live Website**: [Explore TechInnovateHub](https://chili-food.web.app/)
+**Live Website**: [Explore Chili Food](https://chili-food.web.app/)
 
 ## Technologies Used
 
 - **Client-side**: React, React Router, Tailwind CSS, Daisy.
-- **Authentication**: Firebase (Email and Password login, Google signup and signin)
+- **Authentication**: Firebase (Email and Password login, Google signup and signin) and JWT token 
 - **Alerts**: SweetAlert or SweetAlert2 for displaying success and error messages
 - **Server-side**: Node.js, Express, CORS
 - **Database**: MongoDB
@@ -34,9 +34,8 @@
 ### Home Page
 - First there are a navber in banner.
 - The home page includes a banner section.
-- Following the after banner firstly, there are multiple Brands name and logo is displayed.
-- Each brand card includes an image of the brand, its name .
-- User can press in the brand name and it will redirect into a new page .
+- Following the after banner firstly, there are a Top food section where top selling food are displaying via count of order.
+- A see all btn if anyone click there it will redirect the all food page 
 
 ### All Food  Page
 
@@ -45,7 +44,7 @@
 - Each Product card there are product information and two buttons they are : Details and Update
 - Users must be logged in to access these pages.
 
-### Food detils page
+### Food details page
 
 - If a user click in the  details btn he will go in this page and there are details information about the Food 
 - There are a Buy now btn in the product detials page if a user click on this button it will redirect him checkOut page. 

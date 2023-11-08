@@ -58,7 +58,7 @@ const CheckOut = () => {
         if (userEmail == MadeBy) {
             return swal("CheckOut Failed!", "You Created Ths product , you can't buy", "error");
         }
-        const url = 'http://localhost:5000/carts';
+        const url = 'https://chili-food-server.vercel.app/carts';
         axios.post(url, order)
             .then(res => {
                 console.log(res.data);
@@ -67,7 +67,7 @@ const CheckOut = () => {
 
                 const updatedCount = Count + 1;
                 const updatedQuantity = Quantity - 1;
-                const updateUrl = `http://localhost:5000/allFoods/${_id}`
+                const updateUrl = `https://chili-food-server.vercel.app/allFoods/${_id}`
                 axios.patch(updateUrl, { Count: updatedCount, Quantity: updatedQuantity })
                     .then(res => {
                         console.log(res.data);

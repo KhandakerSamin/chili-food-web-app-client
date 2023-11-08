@@ -8,7 +8,7 @@ const TopFood = () => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        const url = "http://localhost:5000/allFoods?sortField=Count&sortOrder=desc";
+        const url = "https://chili-food-server.vercel.app/allFoods?sortField=Count&sortOrder=desc";
         fetch(url)
             .then((res) => res.json())
             .then((responseData) => {

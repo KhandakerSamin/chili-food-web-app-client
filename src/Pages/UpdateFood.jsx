@@ -57,7 +57,7 @@ const UpdateFood = () => {
 
     console.log(foodItem);
 
-    const url = `http://localhost:5000/allFoods/${_id}`;
+    const url = `https://chili-food-server.vercel.app/allFoods/${_id}`;
     axios.put(url, foodItem).then((res) => {
       console.log(res.data);
       if(res.data.modifiedCount > 0){

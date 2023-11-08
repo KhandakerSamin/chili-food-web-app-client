@@ -13,7 +13,7 @@ const MyAddedFood = () => {
 
     const [myFoods, setMyFoods] = useState([]);
 
-    const url = `http://localhost:5000/allFoodsbyEmail?email=${user?.email}`;
+    const url = `https://chili-food-server.vercel.app/allFoodsbyEmail?email=${user?.email}`;
 
     useEffect(() => {
 

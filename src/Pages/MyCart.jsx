@@ -15,7 +15,7 @@ const MyCart = () => {
 
     const [myCart, setMyCarts] = useState([]);
 
-    const url = `http://localhost:5000/carts?email=${user?.email}`;
+    const url = `https://chili-food-server.vercel.app/carts?email=${user?.email}`;
 
     useEffect(() => {
         axios.get( url ,{withCredentials:true})
@@ -36,7 +36,7 @@ const MyCart = () => {
             confirmButtonText: 'Yes, Remove it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/carts/${_id}`, {
+                fetch(`https://chili-food-server.vercel.app/carts/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

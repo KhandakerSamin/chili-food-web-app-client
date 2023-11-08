@@ -54,12 +54,12 @@ const AuthProviders = ({ children }) => {
 
             // token if there are user
             if(currentUser){
-                axios.post('http://localhost:5000/jwt',loggedUser, {withCredentials:true})
+                axios.post('https://chili-food-server.vercel.app/jwt',loggedUser, {withCredentials:true})
                 .then(res => {
                     console.log("Token Response" , res.data)
                 })
             }else{
-                axios.post('http://localhost:5000/logout', loggedUser, {withCredentials:true})
+                axios.post('https://chili-food-server.vercel.app/logout', loggedUser, {withCredentials:true})
                 .then(res => {
                     console.log(res.data);
                 })
@@ -69,7 +69,7 @@ const AuthProviders = ({ children }) => {
         return () => {
             unSubscribe();
         };
-        
+
     }, [user]);
 
     const userInfo = {

@@ -57,7 +57,7 @@ const SignIn = () => {
         userName: user?.displayName, 
         userEmail: user?.email
     }
-    const url = 'http://localhost:5000/users';
+    const url = 'https://chili-food-server.vercel.app/users';
     axios.post(url, userInfo)
     .then(res => {
         console.log(res.data);

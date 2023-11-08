@@ -31,7 +31,7 @@ const AddFood = () => {
         const Count = 0;
         const foodItem = { Name, Category, Quantity, Price, FoodOrigin, MadeBy, Description, Image, Count }
         console.log(foodItem);
-        const url = 'http://localhost:5000/allFoods';
+        const url = 'https://chili-food-server.vercel.app/allFoods';
         axios.post(url, foodItem)
             .then(res => {
                 console.log(res.data);

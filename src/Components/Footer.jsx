@@ -13,10 +13,10 @@ const Footer = () => {
             <div className='flex justify-center md:justify-end items-center'>
                 <div>
                     <img className='md:ml-32 ml-14 pb-5 mt-10' src={logo} alt="" />
-                    <p className="font-bold text-center md:text-right mb-8 md:pr-40  text-5xl">
+                    <p className="font-bold bg-transparent text-center md:text-right mb-8 md:pr-40  text-4xl md:text-5xl">
                         Chili Food Company
                     </p>
-                    <p className='text-xl mb-5 text-center md:text-right  md:pr-60'>Copyright © 2023 - All right reserved</p>
+                    <p className='text-lg md:text-xl mb-5 text-center md:text-right  md:pr-60'>Copyright © 2023 - All right reserved</p>
                 </div>
             </div>
             <div className="flex justify-center mb-10 md:justify-end items-center  md:mr-80 gap-4">

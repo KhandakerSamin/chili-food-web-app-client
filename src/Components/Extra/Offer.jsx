@@ -5,8 +5,8 @@ import img3 from './../../assets/img/section.jpg'
 const Offer = () => {
     return (
         <div>
-            <h1 className='text-5xl text-center mt-4 mb-5 md:mt-10 font-bold '>Our Populer Offers</h1>
-            <p className='text-xl text-center  font-semibold'>Those offers is for limited time and also for following some terms and condition </p>
+            <h1 className='text-3xl md:text-5xl text-center mt-4 mb-5 md:mt-10 font-bold '>Our Populer Offers</h1>
+            <p className='text-md md:text-xl mx-10  text-center  font-semibold'>Those offers is for limited time and also for following some terms and condition </p>
             <div className="flex flex-col md:flex-row-reverse w-4/5  gap-x-10 my-16 justify-center mx-auto items-center">
                 <div className='w-full md:w-1/2 '>
                     <img className='h-[580px] rounded-lg w-full' src={img1} alt="" />

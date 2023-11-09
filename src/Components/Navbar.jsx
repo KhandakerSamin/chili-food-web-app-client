@@ -84,13 +84,13 @@ const Navbar = () => {
 
                     {/* theme toggle */}
 
-                    <button onClick={toggleTheme} className="pl-5 normal-case">
+                    <button onClick={toggleTheme} className="pl-2 md:pl-5 normal-case">
                         {theme === "light" ? <MdDarkMode className='text-3xl mt-1'></MdDarkMode> : <MdLightMode className='text-white text-3xl mt-1'></MdLightMode>}
                     </button>
 
                     {/* signIn signOut toggle  */}
 
-                    <div className="pl-5 min-w-20">
+                    <div className="pl-2 md:pl-5 min-w-20">
                         {
                             user ? (
                                 <Link to='/'><button onClick={handleSignOut} className='normal-case w-full text-base md:text-lg btn border-none btn-outline font-bold text-white bg-yellow-600'>SignOut</button></Link>

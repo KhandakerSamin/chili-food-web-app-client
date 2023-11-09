@@ -53,16 +53,14 @@ const AllFood = () => {
 
             <div className="bg-cover rounded-2xl mb-16 mx-2 h-[480px]" style={bannerStyle}>
                 <div>
-                    <h1 className='text-5xl py-[245px] text-yellow-500 font-semibold text-center '>
-                        <span className='font-bold text-6xl  text-white'>Food</span> you love , delivered <span className='font-bold  text-white text-6xl'>to you </span>
-                        <h1 className='mt-5'><input
+                    <h1 className='text-3xl md:text-5xl py-28 md:py-[245px] text-yellow-500 font-semibold text-center '>
+                        <span className='font-bold text-5xl md:text-6xl  text-white'>Food</span> you love , delivered <span className='font-bold  text-white text-5xl md:text-6xl'>to you </span>
+                        <h1 className='mt-6'><input
                             type="text"
-                            placeholder="Search by name"
-                            className="input w-24 rounded-2xl bg-white text-white border-none border-white boder-2 md:w-72 dark:bg-black"
+                            placeholder="Search Food by name"
+                            className="input w-60  rounded-2xl bg-white text-white border-none border-white boder-2 md:w-72 dark:bg-black"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                        />
-
                         /></h1>
                     </h1>
 
@@ -70,14 +68,14 @@ const AllFood = () => {
             </div>
 
             <div>
-                <h1 className='text-5xl text-center mb-5 mt-8 md:mt-20 font-bold '>Our All Foods Items here</h1>
-                <p className='text-xl text-center  font-semibold'> Choose your food and for details click the details button </p>
+                <h1 className='text-3xl mx-5 md:text-5xl text-center mb-5 mt-8 md:mt-20 font-bold '>Our All Foods Items here</h1>
+                <p className='text-lg md:text-xl mx-10 text-center  font-semibold'> Choose your food and for details click the details button </p>
             </div>
 
             {displayFoods ? (
                 <div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-36 gap-7 my-20">
+                    <div className="grid grid-cols-1 md:grid-cols-2 mx-6 lg:grid-cols-3  md:mx-36 gap-7 my-20">
                         {displayFoods.map(food => (
                             <FoodCard key={food._id} food={food} />
                         ))}

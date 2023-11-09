@@ -36,40 +36,39 @@ const FoodDetails = () => {
 
     return (
         <div >
-
             <Helmet>
                 <title>ChiliFood | Details</title>
                 <meta name="description" content="This is a description of my page." />
             </Helmet>
 
-            <div className="bg-cover rounded-2xl mx-2 min-h-[350px]" style={bannerStyle}>
-                <h1 className="text-white text-3xl font-bold text-center pb-4 pt-20">Details Of </h1>
-                <h1 className="text-white text-7xl font-bold text-center pb-4 pt-5">{Name}</h1>
-                <h1 className="text-white text-3xl font-bold text-center pb-4 pt-5">{Category}</h1>
+            <div className="bg-cover rounded-2xl space-y-4 mx-2 h-[200px] md:min-h-[350px]" style={bannerStyle}>
+                <h1 className="text-white text-lg md:text-3xl font-bold text-center md:pb-4 pt-10 md:pt-20">Details Of </h1>
+                <h1 className="text-white text-2xl md:text-7xl font-bold text-center md:pb-4 md:pt-5">{Name}</h1>
+                <h1 className="text-white text-lg md:text-3xl font-bold text-center md:pb-4 md:pt-5">{Category}</h1>
                 
             </div>
-            <div className="flex justify-center gap-x-8 mx-16 mt-20 items-start">
-                <div className="w-2/3">
-                    <img className="w-full rounded-2xl h-[500px]" src={Image} alt="" />
+            <div className="flex flex-col md:flex-row justify-center gap-x-8 mx-5 md:mx-16 mt-20 items-start">
+                <div className="w-full md:w-2/3">
+                    <img className="w-full rounded-2xl h-[300px] md:h-[500px]" src={Image} alt="" />
 
                 </div>
-                <div className="w-1/3 my-5 space-y-4">
-                    <h1 className="text-4xl  font-bold">{Name} </h1>
-                    <h1 className="text-3xl font-bold">Price: $ <span className="text-yellow-400">{Price}</span> </h1>
-                    <h1 className="text-2xl font-semibold">Category: {Category} </h1>
-                    <h1 className="text-2xl font-semibold">Quantity Remaining: {Quantity} </h1>
-                    <h1 className="text-2xl font-semibold">Food Origin: {FoodOrigin} </h1>
-                    <h1 className="text-2xl font-semibold">Made By: {MadeBy} </h1>
-                    <h1 className="text-xl font-semibold">Description: {Description} </h1>
+                <div className=" md:w-1/3 ml-3 max-w-[300px] my-5 space-y-2 md:space-y-4">
+                    <h1 className="text-2xl md:text-4xl  font-bold">{Name} </h1>
+                    <h1 className="text-xl md:text-3xl font-bold">Price: $ <span className="text-yellow-400">{Price}</span> </h1>
+                    <h1 className="text-lg md:text-2xl font-semibold">Category: {Category} </h1>
+                    <h1 className="text-lg md:text-2xl font-semibold">Quantity Remaining: {Quantity} </h1>
+                    <h1 className="text-lg md:text-2xl font-semibold">Food Origin: {FoodOrigin} </h1>
+                    <h1 className= "text-md md:text-2xl font-semibold">Made By: {MadeBy} </h1>
+                    <h1 className="text-sm font-semibold">Description: {Description} </h1>
                 </div>
             </div>
             <div className="flex justify-center items-center">
-                <Link to={`/checkOut/${_id}`}> <button className="btn btn-outline px-40 normal-case font-bold bg-yellow-600 border-none text-2xl text-white my-10">Order Now...</button></Link>
+                <Link to={`/checkOut/${_id}`}> <button className="btn btn-outline px-20 md:px-40 normal-case font-bold bg-yellow-600 border-none text-xl md:text-2xl text-white my-10">Order Now...</button></Link>
             </div>
 
             <div>
-            <h1 className='text-5xl text-center mb-3 mt-8 md:mt-8 font-bold '>Our Populer Foods</h1>
-            <p className='text-xl text-center  font-semibold'>Here some suggested food for you  </p>
+            <h1 className= 'text-3xl md:text-5xl text-center mb-3 mt-8 md:mt-8 font-bold '>Our Populer Foods</h1>
+            <p className='text-lg md:text-xl text-center  font-semibold'>Here some suggested food for you  </p>
             </div>
 
             {data ? (

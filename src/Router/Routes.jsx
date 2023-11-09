@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       {
         path: '/foodDetails/:id',
         element: <FoodDetails></FoodDetails>,
-        loader: ({ params }) => fetch(`https://chili-food-server.vercel.app/allFoods/${params.id}`)
+        loader: ({ params }) => fetch(`https://chili-food-server.vercel.app/allFoods/${params.id}`),
       },
       {
         path: '/checkOut/:id',

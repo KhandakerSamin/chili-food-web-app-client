@@ -2,18 +2,18 @@
 
 import { Link } from "react-router-dom";
 
-const TopFoodCard = ({singleData}) => {
+const DetailsCard = ({singleData}) => {
     const { Price, Image, _id, Category, Name, Quantity, FoodOrigin } = singleData;
-    // console.log(food);
+
     return (
-        <div className="  shadow-2xl border-black  max-w-[350px] max-h-[500px] rounded-3xl">
+        <div className=" border shadow-md border-black  max-w-[350px] max-h-[500px] rounded-3xl">
             <div className="">
                 <img className="w-[350px] rounded-t-2xl h-[250px]" src={Image} alt="" />
             </div>
             <div className="mx-10 gap-x-10">
                 <h1 className="text-left font-bold text-xl mt-5 mb-2">{Name}</h1>
                 
-                    <h1 className="text-md text-left font-bold">Price: $ <span className="text-xl text-yellow-500">{Price}</span></h1>
+                    <h1 className="text-md text-left font-bold">Price: $ <span className="text-xl text-yellow-400">{Price}</span></h1>
                     <h1 className="text-md text-left font-semibold">Category: {Category}</h1>
                     <h1 className="text-md text-left font-semibold ">Quantity:{Quantity}</h1>
                     <h1 className="text-md text-left font-semibold ">Origin: {FoodOrigin}</h1>
@@ -26,5 +26,7 @@ const TopFoodCard = ({singleData}) => {
         </div>
     );
 };
- 
-export default TopFoodCard;
+export default DetailsCard;
+
+/* eslint-disable react/prop-types */
+

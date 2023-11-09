@@ -55,7 +55,7 @@ const AddFood = () => {
                 <p className="text-center text-white font-semibold text-2xl">For Confirm Add Click the Add Food Button</p>
             </div>
 
-            <div className="relative mb-16">
+            <div className=" mb-16">
                 <div className="mb-12 ml-4 mt-6">
 
                 </div>

@@ -6,24 +6,20 @@ const FoodCard = ({ food }) => {
     const { Price, Image, _id, Category, Name, Quantity, FoodOrigin } = food;
     // console.log(food);
     return (
-        <div className="shadow-xl max-w-[350px] rounded-xl">
+        <div className="  shadow-2xl border-black   max-w-[350px] max-h-[500px] rounded-3xl">
             <div className="">
                 <img className="w-[350px] rounded-t-2xl h-[250px]" src={Image} alt="" />
             </div>
             <div className="mx-10 gap-x-10">
-                <h1 className="text-center font-bold text-2xl my-5">{Name}</h1>
-                <div className="flex w-full items-center">
-                    <h1 className="text-xl w-1/2 text-left font-bold">$ {Price}</h1>
-                    <h1 className="text-xl w-1/2 text-left font-semibold">{Category}</h1>
-                </div>
-                <div className="flex  items-center mb-5">
-                    <h1 className="text-xl text-left font-semibold w-1/2">Quantity:{Quantity}</h1>
-                    <h1 className="text-xl text-left font-semibold w-1/2">Origin: {FoodOrigin}</h1>
-
-                </div>
-                <div className="mb-5">
+                <h1 className="text-left font-bold text-xl mt-5 mb-2">{Name}</h1>
+                
+                    <h1 className="text-md text-left font-bold">Price: $ <span className="text-xl text-yellow-500">{Price}</span></h1>
+                    <h1 className="text-md text-left font-semibold">Category: {Category}</h1>
+                    <h1 className="text-md text-left font-semibold ">Quantity:{Quantity}</h1>
+                    <h1 className="text-md text-left font-semibold ">Origin: {FoodOrigin}</h1>
+                <div className="mb-5 mt-2">
                     <Link to={`/foodDetails/${_id}`}>
-                        <button className="normal-case btn btn-outline w-full  ">Details</button>
+                        <button className="normal-case border-none bg-yellow-600 text-white btn btn-outline w-full  ">Details</button>
                     </Link>
                 </div>
             </div>
@@ -32,3 +28,4 @@ const FoodCard = ({ food }) => {
 };
 
 export default FoodCard;
+

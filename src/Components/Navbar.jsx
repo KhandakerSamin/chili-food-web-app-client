@@ -53,49 +53,49 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <div className=' mr-2 flex justify-center items-center'>
+                <div className=' flex justify-center items-center'>
 
-                    {/* user profile dropdown */}
 
-                    <div className='flex justify-center items-center'>
-
-                        <div class="dropdown dropdown-hover dropdown-bottom">
-                            <label tabIndex={0} className="m-1">
+                    <div className="drawer drawer-end">
+                        <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+                        <div className="drawer-content">
+                            {/* Page content here */}
+                            <label htmlFor="my-drawer-4" className="drawer-button ">
                                 {user ?
-                                    <img className='rounded-full w-[35px] md:w-[40px] h-[35px]  md:h-[40px] mr-2' src={user.photoURL} alt='' />
+                                    <img className='rounded-full w-[35px] md:w-[40px] h-[35px]  md:h-[40px] ' src={user.photoURL} alt='' />
                                     : <></>
                                 }
                             </label>
-
-                            <ul tabindex={0} className="dropdown-content z-[1] menu p-2 gap-y-2 md:p-5 shadow bg-base-100 rounded-box  w-32 md:w-44">
-                                <li className="text-xl font-bold">My Profile: 😎</li>
+                        </div>
+                        <div className="drawer-side">
+                            <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
+                            <ul className="menu p-4 space-y-3 w-80 min-h-full bg-base-200 text-base-content">
+                                {/* Sidebar content here */}
+                                <li className="text-xl font-bold"> <img className='h-24 w-28 rounded-full' src={user?.photoURL} alt='Profile I' /></li>
+                                <li className="text-xl font-bold">{user?.displayName}</li>
                                 <NavLink to='/myAddedFood'><li><a className="text-base md:text-lg font-normal md:font-bold">👉 My added  food items</a></li></NavLink>
                                 <NavLink to='/addFood'><li><a className="text-base md:text-lg font-normal md:font-bold">👉 Add a food item
                                 </a></li></NavLink>
                                 <NavLink to='myCart'><li><a className="text-base md:text-lg font-normal md:font-bold">👉 My ordered food items</a></li></NavLink>
-
-                                
-
-
+                                <Link to='/signIn'><button className="btn btn-outline text-white bg-yellow-600 normal-case w-full text-base border-none md:text-lg font-bold">Switch Account</button></Link>
                             </ul>
                         </div>
-
                     </div>
 
                     {/* theme toggle */}
 
-                    <button onClick={toggleTheme} className=" mx-2  normal-case">
+                    <button onClick={toggleTheme} className="pl-5 normal-case">
                         {theme === "light" ? <MdDarkMode className='text-3xl mt-1'></MdDarkMode> : <MdLightMode className='text-white text-3xl mt-1'></MdLightMode>}
                     </button>
 
                     {/* signIn signOut toggle  */}
 
-                    <div className="md:mr-3 md:ml-3 ">
+                    <div className="pl-5 min-w-20">
                         {
                             user ? (
-                                <Link to='/'><button onClick={handleSignOut} className='normal-case text-base md:text-lg btn btn-outline font-bold text-black'>Sign Out</button></Link>
+                                <Link to='/'><button onClick={handleSignOut} className='normal-case w-full text-base md:text-lg btn border-none btn-outline font-bold text-white bg-yellow-600'>SignOut</button></Link>
                             ) : (
-                                <Link to='/signIn'><button className='normal-case text-base md:text-lg btn btn-outline font-bold text-black'>SignIn</button></Link>
+                                <Link to='/signIn'><button className='normal-case border-none text-base md:text-lg w-full btn btn-outline font-bold text-black'>SignIn</button></Link>
                             )
                         }
                     </div>

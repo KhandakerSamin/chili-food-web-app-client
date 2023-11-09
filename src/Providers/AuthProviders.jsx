@@ -56,7 +56,7 @@ const AuthProviders = ({ children }) => {
             if(currentUser){
                 axios.post('https://chili-food-server.vercel.app/jwt',loggedUser, {withCredentials:true})
                 .then(res => {
-                    console.log("Token Response" , res.data)
+                    console.log( res.data)
                 })
             }else{
                 axios.post('https://chili-food-server.vercel.app/logout', loggedUser, {withCredentials:true})

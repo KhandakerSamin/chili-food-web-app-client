@@ -5,7 +5,9 @@ import bannerImg from '../assets/img/italian-food-composition-with-big-space-mid
 import axios from "axios";
 import swal from "sweetalert";
 import { Helmet } from 'react-helmet';
-
+import img1 from '../assets/img/section-1.jpg'
+import img2 from '../assets/img/section-2.jpg'
+import img3 from '../assets/img/section.jpg'
 
 
 const CheckOut = () => {
@@ -63,7 +65,7 @@ const CheckOut = () => {
             .then(res => {
                 console.log(res.data);
                 swal("CheckOut Confirmed!", "You Purchase this Successfully!", "success");
-                navigate('/allFoods')
+                navigate('/myCart')
 
                 const updatedCount = Count + 1;
                 const updatedQuantity = Quantity - 1;
@@ -90,28 +92,52 @@ const CheckOut = () => {
                 <p className="text-center text-white font-semibold text-3xl">For Confirm Purchase Click the Purchase Button</p>
             </div>
 
-            <div className="w-2/3 mx-auto p-10 bg-red-50 rounded-2xl my-10">
-                <h1 className="text-4xl font-bold text-center">{Name} </h1>
-                <div className="flex justify-between items-start px-32 mt-10">
-                    <div className="space-y-3">
-                        <h1 className="text-2xl font-bold">Food Info : </h1>
-                        <h1 className="text-xl font-bold">Price : $ {Price} </h1>
-                        <h1 className="text-xl font-bold">Quantity: {Quantity}</h1>
-                        <h1 className="text-xl font-bold">Category: {Category} </h1>
-                        <h1 className="text-xl font-bold">Owner: {MadeBy} </h1>
-                    </div>
-                    <div className="space-y-3">
-                        <h1 className="text-2xl font-bold">Your Info : </h1>
-                        <h1 className="text-xl font-bold">UserName : {user.displayName}</h1>
-                        <h1 className="text-xl font-bold">Email : {user.email}</h1>
-                        <h1 className="text-xl font-bold">Date : {PurchaseDate}</h1>
-                        <h1 className="text-xl font-bold">Time : {PurchaseTime}</h1>
-
+            <div className="flex flex-row ">
+                <div className="w-3/5 p-10 rounded-2xl mt-14">
+                <h1 className='text-5xl text-center mt-4 mb-5  md:mt-16 font-bold '>Check Out Form</h1>
+                    <p className='text-xl mb-10 text-center  font-semibold'>Review Your Information Properly </p>
+                    <div className=" shadow-2xl rounded-2xl">
+                        <h1 className="text-4xl pt-10 font-bold text-center">{Name} <span className="text-2xl text-yellow-500">X 1</span> </h1>
+                        <div className="flex w-1/2 pl-3 ml-48 mx-auto flex-col  justify-between items-start mt-10">
+                            <div className="space-y-6">
+                                <h1 className="text-2xl text-center font-bold">Food Info : </h1>
+                                <div className="flex justify-between items-center">
+                                    <h1 className="text-2xl font-bold">Price : $ <span className="text-yellow-500">{Price}</span> </h1>
+                                    <h1 className="text-xl font-bold">Remaining: {Quantity}</h1>
+                                </div>
+                                <h1 className="text-xl font-bold">Category: {Category} </h1>
+                                <h1 className="text-xl font-semibold">Made By: {MadeBy} </h1>
+                            </div>
+                            <div className="space-y-6">
+                                <h1 className="text-2xl text-center mt-5 font-bold">Your Info : </h1>
+                                <h1 className="text-xl font-semibold">Name : {user.displayName}</h1>
+                                <h1 className="text-xl font-semibold">Email : {user.email}</h1>
+                                <div className="flex justify-between items-center">
+                                    <h1 className="text-xl font-bold">Date : {PurchaseDate}</h1>
+                                    <h1 className="text-xl font-bold">Time : {PurchaseTime}</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex justify-center items-center">
+                            <Link><button onClick={handleCheckOut} className="btn btn-outline bg-yellow-600 border-none text-white px-40 normal-case font-bold  text-2xl my-10">Confirm Purchase</button></Link>
+                        </div>
                     </div>
                 </div>
-                <div className="flex justify-center items-center">
-                    <Link><button onClick={handleCheckOut} className="btn btn-outline px-40 normal-case font-bold  text-2xl my-10">Confirm Purchase</button></Link>
+                <div className="2/5 p-10 mr-5 max-w-xl rounded-2xl mt-20 ">
 
+                    <h1 className='text-5xl text-center mt-4 mb-5 md:mt-10 font-bold '>Our Populer Offers</h1>
+                    <p className='text-xl text-center  font-semibold'>Those offers is for limited time and also for following some terms and condition </p>
+
+                    <div className="flex flex-col-reverse  w-full  gap-y-10 my-16 justify-center mx-auto items-center">
+                        {/* <div className='w-full '>
+                            <img className='h-[580px] rounded-lg w-full' src={img1} alt="" />
+                        </div> */}
+                        <div className="flex w-full gap-y-10 mt-4 md:mt-0 flex-col justify-center ">
+
+                            <img className='rounded-lg mb-4 md:mb-0' src={img2} alt="" />
+                            <img className='rounded-lg mb-4 md:mb-0 ' src={img3} alt="" />
+                        </div>
+                    </div>
                 </div>
             </div>
 

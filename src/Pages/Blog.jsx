@@ -26,14 +26,18 @@ const Blog = () => {
     <div className="container mx-auto mt-16">
 
 
+
       <div className="bg-cover rounded-2xl mb-16 mx-2 h-[480px]" style={bannerStyle}>
         <h1 className='text-5xl py-[145px] text-black font-semibold text-left mx-28 '>
           <span className='font-bold text-7xl'>Welcome</span> to Blogs  <br /> for our  <span className='font-bold text-7xl'>Chili Food </span>
         </h1>
       </div>
 
+      <h1 className='text-5xl text-center mb-5 mt-8 md:mt-20 font-bold '>Our Blog Page</h1>
+            <p className='text-xl text-center  font-semibold'>Given Question answer are given here via blog style </p>
+
       {blogPosts.map((post, index) => (
-        <div key={index} className="bg-white my-10 mx-24 shadow-md p-16 rounded-lg ">
+        <div key={index} className=" my-10 mx-24 shadow-md p-16 rounded-lg ">
           <h2 className="text-4xl mb-6 text-center font-bold">{post.title}</h2>
           <p className="text-gray-600 text-xl font-medium mb-4">{post.content.split('\n').map((paragraph, pIndex) => (
             <p key={pIndex} className="mb-2">{paragraph}</p>

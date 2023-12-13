@@ -15,6 +15,7 @@ import MyCart from "../Pages/MyCart";
 import MyAddedFood from "../Pages/MyAddedFood";
 import UpdateFood from "../Pages/UpdateFood";
 import SignUp from "../Pages/SignUp";
+import MyBookings from "../Pages/MyBookings";
 
 
 
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path: '/myCart',
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
+      },
+      {
+        path: '/bookings',
+        element: <PrivateRoute><MyBookings></MyBookings></PrivateRoute>
       },
       {
         path: '/updateFoods/:id',

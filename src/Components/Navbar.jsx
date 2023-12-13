@@ -77,6 +77,7 @@ const Navbar = () => {
                                 <NavLink to='/addFood'><li><a className="text-base md:text-lg font-normal md:font-bold">👉 Add a food item
                                 </a></li></NavLink>
                                 <NavLink to='myCart'><li><a className="text-base md:text-lg font-normal md:font-bold">👉 My ordered food items</a></li></NavLink>
+                                <NavLink to='/bookings'><li><a className="text-base md:text-lg font-normal md:font-bold">👉 My Booked Table</a></li></NavLink>
                                 <Link to='/signIn'><button className="btn btn-outline text-white bg-yellow-600 normal-case w-full text-base border-none md:text-lg font-bold">Switch Account</button></Link>
                             </ul>
                         </div>
